@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findAvg(diem) {
+            var sum = 0;
+            for (let i = 0; i < diem.length; i++) {
+                sum += diem[i];
+            }
+
+            var avg = sum / diem.length;
+            return avg;
+        }
+
+        var diem = [85, 93, 76, 81, 67];
+        var diemtb = findAvg(diem);
+        console.log("Điểm trung bình:", diemtb);
+    </script>
+</body>
+
+</html>

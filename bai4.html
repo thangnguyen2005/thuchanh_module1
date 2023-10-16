@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="hinh"></canvas>
+    <script>
+        class Rectangle {
+            constructor(x, y, width, height, color) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.color = color;
+            }
+            render(canvas) {
+                const context = canvas.getContext('2d');
+                context.fillStyle = this.color;
+                context.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+    
+        const canvasWidth = 200;
+        const canvasHeight = 200;
+        const canvas = document.getElementById('hinh');
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+        
+        const hinh = new Rectangle(50, 50, 200, 100, "red");
+        hinh.render(canvas);
+    </script>
+</body>
+</html>
